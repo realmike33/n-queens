@@ -13,11 +13,40 @@
 
 // return a matrix (an array of arrays) representing a single nxn chessboard, with n rooks placed such that none of them can attack each other
 
+//hasRowConflictAt: given a row, does it have a conflict with another Queen
+//hasAnyRowConflicts: checks every row in board for a conflict
+//hasColConflictAt: given a column, does it have a conflict with another Queen
+//hasAnyColConflicts: checks every column in board for a conflict
+//hasMajorDiagonalConflictAt:
+//hasAnyMajorDiagonalConflicts: function() {
+//hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
+//hasAnyMinorDiagonalConflicts: function() {
 window.findNRooksSolution = function(n) {
-  var solution = undefined; //fixme
+  //create new instance of board, with size n
+  var board = new Board({n:5});
+  //create variable called result, var result = [];
+  var result = [];
+  var count = 0;
 
+  //create innerFunction that will recursively call on each row
+  var innerFunc = function(row) {
+    //base case: once result.length === n, return;
+    if (result.length === n) {
+      return;
+    }
+    //create a loop that iterates through each row
+    for (var i = 0; i < n; i++) {
+      //create an inner loop that iterates over each chess space
+      for (var j = 0; j < n; j++) {
+
+      }
+    }
+  }
+
+
+      //call innerFunction, pass in
+  //return 1 passing 2D solution array, return result;
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
-  return solution;
 };
 
 
@@ -38,6 +67,7 @@ window.findNQueensSolution = function(n) {
 
   console.log('Single solution for ' + n + ' queens:', JSON.stringify(solution));
   return solution;
+
 };
 
 
